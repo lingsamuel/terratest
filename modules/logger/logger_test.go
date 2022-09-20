@@ -16,7 +16,7 @@ func TestDoLog(t *testing.T) {
 	text := "test-do-log"
 	var buffer bytes.Buffer
 
-	DoLog(t, 1, &buffer, text)
+	doLog(t, 1, &buffer, text)
 
 	assert.Regexp(t, fmt.Sprintf("^%s .+? [[:word:]]+.go:[0-9]+: %s$", t.Name(), text), strings.TrimSpace(buffer.String()))
 }
